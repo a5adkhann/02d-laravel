@@ -45,5 +45,13 @@ class EmployeeController extends Controller
         return redirect("/getemployees");
     }
 
+    public function deleteEmployee($id){
+        $emp = Employee::find($id);
+
+        $emp->delete();
+
+         return redirect("/getemployees");
+    }
+
 
 }

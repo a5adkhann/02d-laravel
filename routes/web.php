@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/addemployee', function () {
@@ -18,3 +18,4 @@ Route::post('/addemployee', [EmployeeController::class, "addEmployee"]);
 
 Route::get('/editemployee/{id}', [EmployeeController::class, "editEmployee"]);
 Route::post('/editingemployee/{id}', [EmployeeController::class, "editingEmployee"]);
+Route::get('/deleteemployee/{id}', [EmployeeController::class, "deleteEmployee"]);
